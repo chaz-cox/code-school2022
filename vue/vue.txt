@@ -1,0 +1,22 @@
+Vue
+
+Directives
+----------------------------------------------------
+v-if= "variable"
+    -display an element if variable is true
+v-else
+ - display an element if variable is not true
+ v-show="variable"
+    -display an element if variable is true
+    -v-else doesnt work
+v-on:click="foo()"
+    -when you click, 'foo' happens
+    - :click, :mousedown, :mouseover, :keydown, ...
+v-for= "item in items"
+    -creates an instance of all inner html for each item within items array
+v-bind:style="{color: '#fff'}"
+    -turns all text within the element white
+    - :disabled, :class, :id
+v-model = "question"
+    -binds the question variable and input value togther
+    -goes both ways

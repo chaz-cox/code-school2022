@@ -1,0 +1,22 @@
+body{
+    background-color: #222;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+}
+#eight-ball{
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    margin: auto;
+    background-color: black;
+}
+#message{
+    justify-content: center;
+    padding: 10%;
+    border: 1px dashed white;
+    width: fit-content;
+    margin: 30% auto;
+    border-radius: 50%;
+    height: fit-content;
+}

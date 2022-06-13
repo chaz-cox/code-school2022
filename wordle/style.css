@@ -1,0 +1,43 @@
+body{
+    font-family: sans-serif;
+}
+h1{
+    text-align: center;
+    font-family: sans-serif;
+}
+.guess{
+    display: flex;
+    justify-content: center;
+}
+.letter{
+    border: 3px solid black;
+    cursor:pointer;
+    font-size: 45px;
+    height: 75px;
+    line-height: 75px;
+    margin: 2px;
+    text-align: center;
+    width:75px;
+    background-color: white;
+    
+}
+.check{
+    text-align: center;
+}
+#inputs{
+    display: flex;
+    justify-content: center;
+}
+
+.grey *{
+    background-color: grey;
+    color: white;
+}
+.green{
+    background-color: green;
+    color:white;
+}
+.yellow{
+    background-color: yellow;
+    color:white;
+}

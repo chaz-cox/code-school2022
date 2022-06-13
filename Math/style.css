@@ -1,0 +1,24 @@
+body{
+    font-family: sans-serif;
+}
+#title{
+    text-align: center;
+    background-color: aqua;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navbar{
+    border: 1px solid black;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+
+}
+nav{
+    
+}
+

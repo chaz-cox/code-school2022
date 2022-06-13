@@ -1,0 +1,21 @@
+/*name file style.css*/
+.hero{
+    background-image: linear-gradent(rgba(0,0,0,.5),yellow),url(imageaddress);
+    height: 450px;
+    width: 100%;
+    max-width: 1200px;
+    background-size: cover; /*mess around with this*/
+    margin: 0 auto; /* left right 0 top bottom auto*/
+    /*position parent - relative; child - absolute;fixed-takes up space, sicky-doesnt*/ 
+    padding-left: 100px;
+    display:flex; /* flex is a container - 1.horzontal stacking; 2.justify/align; 3.spacing; 4.super responsive*/
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column; /*change the hozontal thing*/
+}
+a{
+    color:purple;
+}
+a:hover{
+    color: white;
+}
