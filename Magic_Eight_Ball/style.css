@@ -19,4 +19,7 @@ body{
     margin: 30% auto;
     border-radius: 50%;
     height: fit-content;
+    transition: 1s;
+    font-weight: bold;
+    background-color: white;
 }

@@ -11,8 +11,8 @@
     <div id="app">
         <div id="eight-ball">
             <h1>Magic Eight Ball</h1> 
-                <div id="message">{{ message }} </div>
-            {{ prompt }} <br>
+            <div id="message" v-bind:style="{color: messageColor}">{{ message }} </div>
+            <div v-show="answerReady"> {{ prompt }} <br></div>
         </div>
         <input v-model="question" v-on:keydown.enter="askQuestion()"> <br>
         <button v-show="isValidQuestion()" v-on:click="askQuestion()">Ask Question</button>
