@@ -17,36 +17,31 @@ var app = new Vue({
                     this.updateMoleRecursive();
             },1000);
             hitMole =>(){
-                this.score++,
-                this.moleRow = -1,
-                this.moleColumn = -1
+                this.score++;
+                this.moleRow = -1;
+                this.moleColumn = -1;
             }
+            },
+            created: function() {
+                updateMoleRecursive();
+        }
 
-                    
-                    
-
-
-                    // row count and column count
-            //
-            //         // mole position (row and column)
-            //
-            //                 // score and total
-            //                     },
-            //                         methods: {
-            //                                 updateMoleRecursive: function () {
-            //                                             // use SetTimeout to 
-            //                                                         // 1. change the mole's position
-            //                                                                     // 2. update the total
-            //                                                                                 
-            //                                                                                         },
-            //                                                                                                 hitMole: function () {
+            // row count and column count
+            //// mole position (row and column)
+            //// score and total
+            //},
+            //methods: {
+            //  updateMoleRecursive: function () {
+            //  // use SetTimeout to 
+            //  // 1. change the mole's position
+            //  // 2. update the total
+            // },
+            //  hitMole: function () {
             //  // 1. add 1 to the score
-            //
             //  // 2. clear the mole off the board
-            //
-            //                                                                                                                                 }
-            //                                                                                                                                     },
-            //                                                                                                                                         created: function () {
-            //                                                                                                                                                 // Call Recursive function to start
-            //                                                                                                                                                     }
-            //                                                                                                                                                     });
+            // }
+            // },
+            // created: function () {
+            // // Call Recursive function to start
+            //       }
+            //   });
