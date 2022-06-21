@@ -1,0 +1,15 @@
+*{
+    font-family: 'VT323', monospace;
+    color: white;
+}
+body{
+    background-color: black;
+}
+#pokemon, #pokeball{
+    height: 500px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+button{ color: black;}
