@@ -6,6 +6,7 @@ var app = new Vue({
         PokemonName : "",
         PokemonImage : "",
         randomNumber: Math.floor(Math.random() * 1000),
+        hide : false,
     },
     methods: {
         catchPokemon: function (){
@@ -14,6 +15,7 @@ var app = new Vue({
                     console.log(data);
                     this.PokemonName = data.results[0].name;
                     this.getImage(this.PokemonName);
+                    this.hide = true;
                     console.log("Pokemon Name: ", data.results[0].name);
                 });
             });
@@ -31,6 +33,7 @@ var app = new Vue({
             this.PokemonName = "";
             this.PokemonImage = "";
             this.randomNumber =  Math.floor(Math.random() * 1000);
+            this.hide = false;
         },
     }
 });

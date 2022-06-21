@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Pokemon Catching Genorator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,11 +12,14 @@
 </head>
 <body>
     <div id="app">
-        <button v-on:click="catchPokemon()">push</button>
-        <button v-on:click="resetPokemon()">Reset</button>
-        <img v-bind:src="PokemonImage" alt="Pokemon" id ="pokemon"></img>
-        <span id = "pokename"> {{ PokemonName }}</span>
-        <img id ="pokeball" src="https://www.pinclipart.com/picdir/middle/558-5584196_pixel-art-pokeball-clipart-png-download-pokemon-pixel.png" alt= "PokeBall">
+        <button v-on:click="resetPokemon()" v-if="hide">Reset</button>
+        <div v-if="hide">
+            <img v-bind:src="PokemonImage" alt="Pokemon" id ="pokemon"></img>
+            <span id = "pokename"> {{ PokemonName }}</span>
+        </div>
+        <div id="fade" v-if="!hide">
+            <img id ="pokeball"  v-on:click="catchPokemon()" src="https://www.pinclipart.com/picdir/middle/558-5584196_pixel-art-pokeball-clipart-png-download-pokemon-pixel.png" alt= "PokeBall">
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

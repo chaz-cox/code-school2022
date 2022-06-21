@@ -11,5 +11,23 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
+    margin: auto;
+}
+#pokeball{
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#pokemon{
+    width: 25%;
+}
+#pokename{
+    font-size: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 button{ color: black;}
+
+
+
