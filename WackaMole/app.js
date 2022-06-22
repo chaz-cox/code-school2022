@@ -10,21 +10,31 @@ var app = new Vue({
         },
         methods: {
             updateMoleRecursive: function () {
-                (SetTimeout() =>{
+                this.total = 0;
+                var UpdateIntervalID = setInterval(() =>{
                     this.moleRow = Math.ceil(Math.random() * this.rows);
                     this.moleColumn = Math.ceil(Math.random() *this.columns);
                     this.total++;
-                    this.updateMoleRecursive();
+                    if (this.total >= 10){
+                        setTimeout(() => {
+                            this.moleRow = -1;
+                            this.moleColumn = -1;
+                        },1000);
+                        clearInterval(UpdateIntervalID);
+                    }
             },1000);
-            hitMole =>(){
+            },
+
+            hitMole: function(){
                 this.score++;
                 this.moleRow = -1;
                 this.moleColumn = -1;
             }
             },
             created: function() {
-                updateMoleRecursive();
+                this.updateMoleRecursive();
         }
+});
 
             // row count and column count
             //// mole position (row and column)
