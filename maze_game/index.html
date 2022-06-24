@@ -8,20 +8,21 @@
     <div id="app">
         <!-- buttons to start and finish the Maze (IDs: start-button, finish-button) -->
         <!--    - hide buttons when they shouldn't be seen (hide start button after you've started, etc.) -->
-        <button id="start-button" v-on:click="started=true" v-show="!started">Start</button>
-        <button id="finish-button" @:click="won=true" v-show="!won">Finish</button>
+        <button id="start-button" v-on:click="started = true" v-if="!started && !lost && !won">Start</button>
+        <button id="finish-button" @click="won = true" v-if="!won && !lost && started">Finish</button>
         <!-- wall divs (CLASS: wall)-->
         <!--    - display at appropriate times -->
         <!--    - bind the style to the style objects given from the API -->
         <!--    - player lose when their mouse touches the wall -->
-        <div class="wall" v-show="!won && !lost && started"
+        <div class="wall" v-if="!won && !lost && started"
+                          v-for="wall in walls"
                           v-bind:style="wall.style"
                           v-on:mouseover="lost=true">
         </div>
         <!-- win message, lose message, and button for restarting the maze (IDs: win-message, lose-message, restart-button)-->
-        <div id = "win-message"> {{ win-message }}</div>
-        <div id = "lose-messge"> {{ lose-message }}</div>
-        <div id = "restart-button">{{ restart-button }}</div>
+        <div id = "win-message" v-if="won"><h1>You Win!</h1></div>
+        <div id = "lose-messge" v-if="lost"> <h1>You Loose!</h1></div>
+        <button id = "restart-button" v-on:click="restartMaze()">Restart Maze</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="app.js"></script>

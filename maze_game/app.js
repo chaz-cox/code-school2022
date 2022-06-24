@@ -4,11 +4,11 @@ var app = new Vue({
     el: "#app",
     data: {
         // bool variables for started, won, lost
-        started = false,
-        won = false,
-        lost = false,
+        started : false,
+        won : false,
+        lost : false,
         // array for walls
-        walls = [],
+        walls : [],
     },
     methods: {
         // resets started, won, lost to initial values
